@@ -1,8 +1,5 @@
 #alias varios: 
-
 alias telegram="/home/viroide/Telegram/Telegram"
-alias pegleg_env="cd /home/viroide/proyectos/pegleg && terminator -mbl bueno &"
-alias rhuge_env="cd  /home/viroide/proyectos/rhuge/emotional && terminator -mbl emotional &"
 
 # Tmux en fullscrean
 alias tmuxFull="konsole --fullscreen --hide-tabbar --hide-menubar -e 'tmux' 2> /dev/null &"
@@ -11,12 +8,25 @@ alias tmuxFull="konsole --fullscreen --hide-tabbar --hide-menubar -e 'tmux' 2> /
 alias activar="source bin/activate"
 alias desactivar="deactivate"
 
-
-# Dev enviroments
-alias unk_env="tmuxifier load-window unkmail"
-
-
 # Git aliases
-alias gl='git pull'
+alias gl='git pull origin master'
 alias gp='git push origin HEAD'
 alias gca='git commit -a'
+
+# Alias para poner sudo si no soy root
+# if user is not root, pass all commands via sudo #
+if [ $UID -ne 0 ]; then
+    alias reboot='sudo reboot'
+    alias shutdown='sudo shutdown -h now'
+    alias off='sudo shutdown -h now'
+    alias update='sudo apt-get update && sudo apt-get upgrade'
+fi
+
+# cd alias
+alias cd..="cd .."
+
+# Utilities:
+alias .='clear'
+alias x='exit'
+alias myip="curl http://ipecho.net/plain; echo"
+alias folders='du --max-depth=1 --human-readable | sort -h -r'

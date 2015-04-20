@@ -22,3 +22,49 @@ extract () {
    echo "'$1' is not a valid file to extract"
  fi
 }
+
+mcd () {
+    mkdir -p $1
+    cd $1
+}
+
+bak () {
+  for f in $@;do
+    f=$(basename $f)
+    cp -r $f $f.$(date +"%Y-%m-%d").bak || sudo cp -r $f $f.$(date +"%Y%m%H%M%S").bak
+  done
+}
+
+procesos(){
+  # By default, it display the list of processes based on the cpu and memory usage #
+  if [ $# -eq 0 ]
+  then
+
+    echo "Los 10 más come-procesador: "
+    # ps -e -o pcpu,args | sort -rg -k1 | head -n 10
+    ps -e -o pcpu,args --sort=-pcpu  | head -n 10      # sorted based on %cpu
+    echo "Los 10 más come-ram: "
+    ps -e -o pmem,args --sort=-pmem  | head -n 10 
+
+  If arguements are given (mem/cpu)
+  else
+    case "$1" in
+    cpu)
+     echo "Los 10 más come-procesador: "
+     ps -e -o pcpu,args --sort=-pcpu  | head -n 10
+     ;;
+    mem)
+     echo "Los 10 más come-ram: "
+     ps -e -o pmem,args --sort=-pmem  | head -n 10 
+     ;;
+    *)
+      echo "Invalid Argument Given \n"
+      echo "Usage : $0 mem/cpu"
+      exit 1
+    esac  
+
+  fi
+}
+wd() {
+    . ~/bin/wd/wd.sh
+}

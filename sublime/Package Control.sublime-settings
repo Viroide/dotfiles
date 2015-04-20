@@ -1,0 +1,26 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"BracketHighlighter",
+		"ColorPicker",
+		"Diffy",
+		"Emmet",
+		"Emmet Css Snippets",
+		"Jade",
+		"Numix Theme",
+		"Package Control",
+		"Stylus",
+		"SublimeLinter",
+		"SublimeLinter-csslint",
+		"SublimeLinter-jshint",
+		"SublimeLinter-pyflakes",
+		"Theme - Afterglow",
+		"Theme - Brogrammer",
+		"Theme - Moka",
+		"Theme - Tech49"
+	]
+}

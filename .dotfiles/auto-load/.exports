@@ -1,6 +1,0 @@
-#tmuxuifier
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
-
-#editor default
-export EDITOR="subl -n -w"

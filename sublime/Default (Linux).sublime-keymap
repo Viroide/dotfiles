@@ -1,0 +1,6 @@
+[
+	{ "keys": ["ctrl+d"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+shift+d"], "command": "toggle_comment", "args": { "block": true } },
+	{ "keys": ["ctrl+k", "ctrl+l"], "command": "diffy" },
+	{ "keys": ["ctrl+k", "ctrl+c"], "command": "diffy", "args": {"action": "clear"} },
+]

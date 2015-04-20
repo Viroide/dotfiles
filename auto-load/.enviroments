@@ -1,0 +1,6 @@
+# New Dev enviroments
+alias unk_env="tmuxifier load-window unkmail"
+
+#my old env system:
+alias pegleg_env="cd /home/viroide/proyectos/pegleg && terminator -mbl bueno &"
+alias rhuge_env="cd  /home/viroide/proyectos/rhuge/emotional && terminator -mbl emotional &"

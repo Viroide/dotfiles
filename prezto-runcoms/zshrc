@@ -12,14 +12,8 @@ fi
 
 # Customize to your needs...
 
-
-# Carga todos los scripts de la carpeta .dotfiles: 
-
+# Carga todos los scripts de la carpeta auto-load:
 for DOTFILE in `find ~/dotfiles/auto-load/`
 do
   source $DOTFILE
 done
-
-
-
-
