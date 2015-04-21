@@ -13,7 +13,9 @@ fi
 # Customize to your needs...
 
 # Carga todos los scripts de la carpeta auto-load:
-for DOTFILE in `find ~/dotfiles/auto-load/`
+for DOTFILE in `find ~/dotfiles/auto-load/ -type f -name .*`
 do
   source $DOTFILE
 done
+
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)

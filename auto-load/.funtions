@@ -1,4 +1,4 @@
-# Extra many types of compressed packages
+# Extract many types of compressed packages
 # Credit: http://nparikh.org/notes/zshrc.txt
 extract () {
   if [ -f $1 ]; then
@@ -40,13 +40,13 @@ procesos(){
   if [ $# -eq 0 ]
   then
 
-    echo "Los 10 más come-procesador: "
+    echo "\n\nLos 10 más come-procesador: "
     # ps -e -o pcpu,args | sort -rg -k1 | head -n 10
     ps -e -o pcpu,args --sort=-pcpu  | head -n 10      # sorted based on %cpu
-    echo "Los 10 más come-ram: "
+    echo "\n\nLos 10 más come-ram: "
     ps -e -o pmem,args --sort=-pmem  | head -n 10 
 
-  If arguements are given (mem/cpu)
+  # If arguements are given (mem/cpu)
   else
     case "$1" in
     cpu)
@@ -67,4 +67,10 @@ procesos(){
 }
 wd() {
     . ~/bin/wd/wd.sh
+}
+
+montar(){
+  sudo mkdir /mnt/$1/
+  sudo mount -o loop $1 /mnt/$1/
+
 }

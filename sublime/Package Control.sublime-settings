@@ -18,9 +18,6 @@
 		"SublimeLinter-csslint",
 		"SublimeLinter-jshint",
 		"SublimeLinter-pyflakes",
-		"Theme - Afterglow",
-		"Theme - Brogrammer",
-		"Theme - Moka",
-		"Theme - Tech49"
+		"Theme - Afterglow"
 	]
 }

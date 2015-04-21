@@ -1,4 +1,4 @@
-#alias varios: 
+# Alias varios: 
 alias telegram="/home/viroide/Telegram/Telegram"
 
 # Tmux en fullscrean
@@ -12,6 +12,8 @@ alias desactivar="deactivate"
 alias gl='git pull origin master'
 alias gp='git push origin HEAD'
 alias gca='git commit -a'
+alias gcam='git commit -am"$1"'
+
 
 # Alias para poner sudo si no soy root
 # if user is not root, pass all commands via sudo #
@@ -28,5 +30,10 @@ alias cd..="cd .."
 # Utilities:
 alias .='clear'
 alias x='exit'
+alias afk='sudo pm-suspend' 
 alias myip="curl http://ipecho.net/plain; echo"
 alias folders='du --max-depth=1 --human-readable | sort -h -r'
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
+# webDev alias 
+alias server='python -m SimpleHTTPServer 8888';

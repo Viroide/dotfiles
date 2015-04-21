@@ -1,0 +1,128 @@
+[global_config]
+  title_transmit_bg_color = "#000000"
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    background_image = /home/viroide/temp/pink_smiley_faces-wallpaper-1920x1080.jpg
+    custom_command = zsh
+    background_type = transparent
+    foreground_color = "#c2c2c2"
+    exit_action = restart
+    background_darkness = 0.75
+    copy_on_selection = True
+    background_color = "#3a3a3a"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[emotional]]
+    [[[child0]]]
+      position = 1487:245
+      type = Window
+      order = 0
+      parent = ""
+      size = 657, 427
+    [[[child1]]]
+      position = 328
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 213
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      command = grunt watch
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      command = zsh
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = default
+      command = ./manage.py runserver
+      type = Terminal
+      order = 0
+      parent = child3
+  [[unk]]
+    [[[child0]]]
+      position = 1918:161
+      type = Window
+      order = 0
+      parent = ""
+      size = 1361, 699
+    [[[child1]]]
+      position = 680
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 349
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      command = gulp watch
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      command = zsh
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = default
+      command = ./manage.py runserver
+      type = Terminal
+      order = 0
+      parent = child3
+  [[bueno]]
+    [[[child0]]]
+      position = -1:154
+      type = Window
+      order = 0
+      parent = ""
+      size = 1361, 716
+    [[[child1]]]
+      position = 680
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 358
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child1
+      command = gulp watch
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+      command = zsh
+    [[[terminal4]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child3
+      command = cd pegleg && nodemon
+[plugins]

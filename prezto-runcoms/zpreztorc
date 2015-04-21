@@ -35,7 +35,8 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'git' \
   'fasd' \
-  'python'
+  'python' \
+  'syntax-highlighting'
 
 #
 # Editor
@@ -117,15 +118,14 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 # Syntax Highlighting
 #
-
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
 # zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'cursor' \
-#   'root'
+  # 'main' \
+  # 'brackets' \
+  # 'pattern' \
+  # 'cursor' \
+  # 'root'
 #
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
@@ -158,3 +158,4 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+
