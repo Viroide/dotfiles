@@ -13,7 +13,7 @@ split_h 50
 # Run commands.
 run_cmd "activar && cd unkmail"
 run_cmd "activar && cd unkmail && ./manage.py runserver" 1     # runs in active pane 1
-run_cmd "cd unkmail gulp watch" 2  # runs in pane 2
+run_cmd "cd unkmail && gulp watch" 2  # runs in pane 2
 
 
 # Paste text

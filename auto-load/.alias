@@ -33,7 +33,7 @@ alias x='exit'
 alias afk='sudo pm-suspend' 
 alias myip="curl http://ipecho.net/plain; echo"
 alias folders='du --max-depth=1 --human-readable | sort -h -r'
-alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+# alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 # webDev alias 
 alias server='python -m SimpleHTTPServer 8888';
