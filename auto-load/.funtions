@@ -74,3 +74,7 @@ montar(){
   sudo mount -o loop $1 /mnt/$1/
 
 }
+
+web_serve() {
+  python -m SimpleHTTPServer ${1:-8000}
+}

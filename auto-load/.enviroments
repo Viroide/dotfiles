@@ -3,4 +3,4 @@ alias unk_env="tmuxifier load-window unkmail"
 
 #my old env system:
 alias pegleg_env="cd /home/viroide/proyectos/pegleg && terminator -mbl bueno &"
-alias rhuge_env="cd  /home/viroide/proyectos/rhuge/emotional && terminator -mbl emotional &"
+alias rhuge_env="chromium-browser 127.0.0.1:8000 && subl --project ~/proyectos/rhuge.sublime-project && cd /home/viroide/proyectos/rhuge/emotional && terminator -mbl emotional &"

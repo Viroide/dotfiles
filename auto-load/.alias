@@ -37,3 +37,6 @@ alias folders='du --max-depth=1 --human-readable | sort -h -r'
 
 # webDev alias 
 alias server='python -m SimpleHTTPServer 8888';
+
+#Abrir en chromium
+alias web='chromium-browser $1'
