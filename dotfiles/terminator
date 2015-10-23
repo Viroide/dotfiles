@@ -7,11 +7,11 @@
     background_image = /home/viroide/temp/pink_smiley_faces-wallpaper-1920x1080.jpg
     custom_command = zsh
     background_type = transparent
-    foreground_color = "#c2c2c2"
+    foreground_color = "#839496"
     exit_action = restart
     background_darkness = 0.75
     copy_on_selection = True
-    background_color = "#3a3a3a"
+    background_color = "#002b36"
 [layouts]
   [[default]]
     [[[child1]]]
