@@ -136,6 +136,7 @@ prompt_status() {
 ## Main prompt
 prompt_agnoster_main() {
   RETVAL=$?
+  
   CURRENT_BG='NONE'
   prompt_status
   prompt_context
