@@ -32,8 +32,8 @@ PRIMARY_FG=black
 # SEGMENT_SEPARATOR="\ue0b0"
 # Separador de corazón, para que mole mucho mas! 
 SEGMENT_SEPARATOR=" \u2764 "
-PLUSMINUS="\u00b1"
-BRANCH="\ue0a0"
+PLUSMINUS="😒"
+BRANCH="⛕"
 DETACHED="\u27a6"
 CROSS="\u2718"
 LIGHTNING="\u26a1"
@@ -85,6 +85,7 @@ prompt_git() {
   is_dirty() {
     test -n "$(git status --porcelain --ignore-submodules)"
   }
+
   ref="$vcs_info_msg_0_"
   if [[ -n "$ref" ]]; then
     if is_dirty; then
@@ -100,7 +101,7 @@ prompt_git() {
       ref="$DETACHED ${ref/.../}"
     fi
     prompt_segment $color $PRIMARY_FG
-    print -Pn " $ref"
+    print -Pn "($ref) "
   fi
 }
 
@@ -136,7 +137,6 @@ prompt_status() {
 ## Main prompt
 prompt_agnoster_main() {
   RETVAL=$?
-  
   CURRENT_BG='NONE'
   prompt_status
   prompt_context
