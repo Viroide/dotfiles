@@ -31,7 +31,7 @@ mcd () {
 bak () {
   for f in $@;do
     f=$(basename $f)
-    cp -r $f $f.$(date +"%Y-%m-%d").bak || sudo cp -r $f $f.$(date +"%Y%m%H%M%S").bak
+    cp -r $f $f.$(date +"%d-%m-%Y").bak || sudo cp -r $f $f.$(date +"%d-%m-%Y").bak
   done
 }
 
