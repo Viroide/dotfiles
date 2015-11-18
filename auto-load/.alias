@@ -13,6 +13,8 @@ alias gl='git pull origin master'
 alias gp='git push origin HEAD'
 alias gca='git commit -a'
 alias gcam='git commit -am"$1"'
+alias gstatus='git status -s'
+alias gclean='git clean -di'
 
 
 # Alias para poner sudo si no soy root
