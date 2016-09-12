@@ -1,0 +1,8 @@
+*~
+.DS_Store
+node_modules
+.idea
+*.swp
+target
+grails-app/views/pdf
+web-app/WEB-INF/tld

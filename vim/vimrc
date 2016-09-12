@@ -1,0 +1,122 @@
+"NeoBundle Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath^=/Users/jon.eguiluz/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('/Users/jon.eguiluz/.vim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'vim-airline/vim-airline-themes'
+
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+" Required:
+call neobundle#end()
+
+" Required:
+filetype plugin on
+filetype indent on
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
+"End NeoBundle Scripts-------------------------
+
+" Theme
+colorscheme Tomorrow-Night
+
+syntax on
+set nowrap        " don't wrap lines
+set backspace=indent,eol,start
+                    " allow backspacing over everything in insert mode
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set number        " always show line numbers
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                    "    case-sensitive otherwise
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+
+
+map <C-n> :NERDTreeToggle<CR>
+
+" my customs:
+set clipboard=unnamed
+set ttyfast
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+
+" set a map leader for more key combos
+let mapleader = ','
+let g:mapleader = ','
+nmap <leader>, :w<cr>
+
+nmap <leader>r :so $MYVIMRC<cr>
+
+" ignore some folders and files:
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/target/*,*/node_modules/*
+
+" easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" airline config: 
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+set laststatus=2
+let g:tomorrow = 1
+
+" Set to auto read when a file is changed from the outside
+set autoread
+
+" tagbar:
+nmap <leader>t :TagbarToggle<CR>
+
+" awesome config:
+set ruler
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" bigger history
+set history=1000

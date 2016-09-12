@@ -1,0 +1,12 @@
+export ANDROID_HOME="/Users/jon.eguiluz/theInit/android-sdk-macosx"
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+
+#GRAILS
+export GRAILS_HOME="/Users/jon.eguiluz/theInit/grails-2.4.0"
+export PATH=$GRAILS_HOME/bin:$PATH
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
+#My own bin folder
+export VIROIDE_HOME="/Users/jon.eguiluz/dotfiles"
+export PATH=$VIROIDE_HOME/bin:$PATH
