@@ -16,3 +16,5 @@
 	required = true
 [push]
 	default = simple
+[alias]
+	merge-log = "!f() { git log --stat \"$1^..$1\"; }; f"

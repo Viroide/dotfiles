@@ -24,9 +24,12 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'vim-airline/vim-airline-themes'
-
+NeoBundle 'takac/vim-hardtime'
+NeoBundle 'mattn/emmet-vim'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'tpope/vim-surround'
 
 " Required:
 call neobundle#end()
@@ -41,6 +44,10 @@ NeoBundleCheck
 
 " Theme
 colorscheme Tomorrow-Night
+
+" Hard mode while I need it
+" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 syntax on
 set nowrap        " don't wrap lines
@@ -57,6 +64,8 @@ set smartcase     " ignore case if search pattern is all lowercase,
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
+set cursorline
+set relativenumber
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -120,3 +129,15 @@ set tabstop=4
 
 " bigger history
 set history=1000
+
+
+"Syntastuc config: 
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 1
+let g:syntastic_auto_loc_list = 0
+
+let g:syntastic_error_symbol = '✗✗'
+let g:syntastic_style_error_symbol = '✠✠'
+let g:syntastic_warning_symbol = '∆∆'
+let g:syntastic_style_warning_symbol = '≈≈'
