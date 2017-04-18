@@ -76,3 +76,4 @@ alias tags="ctags -R --exclude=.git --exclude=target --exclude=node_modules ."
 #zip with pass: zipPass output.zip input.*
 alias zipPass='zip -e $1 $2'
 alias starWars='telnet towel.blinkenlights.nl'
+alias markDown='grip $1'

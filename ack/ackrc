@@ -1,0 +1,5 @@
+--ignore-dir=platforms/
+--ignore-dir=node_modules/
+--ignore-dir=plugins/
+--ignore-file=is:tags
+--ignore-dir=.idea/
