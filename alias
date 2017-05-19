@@ -8,19 +8,6 @@ alias gclean='git clean -di'
 alias glist='for ref in $(git for-each-ref --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
 alias glistOrderByDate='for ref in $(git for-each-ref --sort=-committerdate --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
 
-killOldersJava(){
-        javaProcessNumer=`ps -ej | grep java | wc -l`
-        while [ $javaProcessNumer -gt 1 ]
-        do
-                PID=`ps -ej --sort=start_time | grep java | head -n1 | awk '{ print $1 }'`
-                echo "More than one java process, killing the older PID=$PID"
-                kill -9 $PID
-                sleep 2
-                javaProcessNumer=`ps -ej | grep java | wc -l`
-        done
-        PID=`ps -ej --sort=start_time | grep java | head -n1 | awk '{ print $1 }'`
-        echo "Only one java process PID=$PID , nothing to kill"
-}
 
 tidyUpBranch(){
     actualBranch=$(git branch | grep "*" | awk  '{print $2}')
@@ -33,28 +20,18 @@ alias cd..="cd .."
 
 # Utilities:
 alias .='clear'
-alias x='exit' 
+alias x='exit'
 alias myip="curl http://ipecho.net/plain; echo"
 #alias folders='du --max-depth=1 --human-readable | sort -h -r'
 #alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 
 #Alias servidores
-source ~/.serverAlias
+#source ~/.serverAlias
 
 
-# Guard tests
-alias guard='grails -reloading -echoOut -guard test-app' 
-
-# webDev alias 
+# webDev alias
 alias server='python -m SimpleHTTPServer 8888';
-
-# Dev folders:
-alias aegon="wd aev4; sdk use grails 2.4.5;echo;echo; ./grailsw"
-alias axa="wd hk; sdk use grails 2.4.0; echo; echo; grails run-app"
-alias aegon="wd ae; sdk use grails 1.3.7; echo; echo; grails run-app"
-#alias aonV3="wd aon; sdk use grails 1.3.7; echo; echo; grails run-app"
-alias aon2="wd aon2; sdk use grails 1.3.7; echo; echo; grails -Dserver.port=9090 run-app"
 
 
 # python TDD
@@ -71,7 +48,7 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 #ctags:
-alias tags="ctags -R --exclude=.git --exclude=target --exclude=node_modules ."
+alias tags="/usr/local/Cellar/ctags/5.8_1/bin/ctags -R ."
 
 #zip with pass: zipPass output.zip input.*
 alias zipPass='zip -e $1 $2'
