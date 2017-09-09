@@ -1,5 +1,5 @@
 [core]
-	excludesfile = /Users/jon.eguiluz/.gitignore_global
+	excludesfile = /Users/jone.eguiluz/.gitignore_global
 	editor = nano
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

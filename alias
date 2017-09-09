@@ -7,12 +7,11 @@ alias gstatus='git status -s'
 alias gclean='git clean -di'
 alias glist='for ref in $(git for-each-ref --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
 alias glistOrderByDate='for ref in $(git for-each-ref --sort=-committerdate --format="%(refname)" refs/heads/ refs/remotes ); do git log -n1 $ref --pretty=format:"%Cgreen%cr%Creset %C(yellow)%d%Creset %C(bold blue)<%an>%Creset%n" | cat ; done | awk '"'! a["'$0'"]++'"
-
+alias gDeleteMergedBranches='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
 tidyUpBranch(){
     actualBranch=$(git branch | grep "*" | awk  '{print $2}')
     git rebase -i $actualBranch
-
 }
 
 # cd alias
@@ -54,3 +53,12 @@ alias tags="/usr/local/Cellar/ctags/5.8_1/bin/ctags -R ."
 alias zipPass='zip -e $1 $2'
 alias starWars='telnet towel.blinkenlights.nl'
 alias markDown='grip $1'
+
+# use local mocha
+alias mocha='./node_modules/mocha/bin/mocha $1'
+
+alias clientTest='bundle exec rspec --color test/client/* --default-path test'
+alias clientTestChrome='CHROME=1 bundle exec rspec --color test/client/* --default-path test'
+
+
+alias jenkins='ssh ansible@jenkins2.gamevy.com -i ~/.ssh/ansible_key_jenkins'
