@@ -10,4 +10,4 @@ export PATH="$PATH:$NVM_DIR/versions/node/v6.10.2/bin"
 export VIROIDE_HOME="$HOME/dotfiles"
 export PATH=$VIROIDE_HOME/bin:$PATH
 
-export PATH="/usr/local/opt/ansible@2.0/bin:$PATH"
+# export PATH="/usr/local/opt/ansible@2.0/bin:$PATH"

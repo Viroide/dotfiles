@@ -3,6 +3,14 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
+if (has("nvim"))
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 " Required:
 set runtimepath^=~/.vim/bundle/neobundle.vim/
 
@@ -18,7 +26,6 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
@@ -33,6 +40,9 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'kaicataldo/material.vim'
+NeoBundle 'tyrannicaltoucan/vim-quantum'
+NeoBundle 'othree/es.next.syntax.vim'
 
 " Required:
 call neobundle#end()
@@ -48,7 +58,11 @@ set updatetime=250
 
 
 " Theme 
-colorscheme onedark
+" colorscheme onedark
+set background=dark
+colorscheme quantum 
+
+
 
 syntax on
 set nowrap        " don't wrap lines
@@ -109,7 +123,7 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 set laststatus=2
 let g:tomorrow = 1
-let g:airline_theme='bubblegum'
+let g:airline_theme='material'
 " Set to auto read when a file is changed from the outside
 set autoread
 

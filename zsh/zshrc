@@ -52,7 +52,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git wd)
+plugins=(git wd vagrant httpie)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -140,3 +140,13 @@ export CONSUMER_KEY='...'
 export CONSUMER_SECRET='...'
 export ACCESS_TOKEN='...'
 export ACCESS_TOKEN_SECRET='...'
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/jone.eguiluz/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/jone.eguiluz/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/jone.eguiluz/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/jone.eguiluz/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+source ~/.tmuxinator.zsh
+export EDITOR='vim'
+export GPG_TTY=$(tty)

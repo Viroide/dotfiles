@@ -55,10 +55,17 @@ alias starWars='telnet towel.blinkenlights.nl'
 alias markDown='grip $1'
 
 # use local mocha
-alias mocha='./node_modules/mocha/bin/mocha $1'
+alias mocha='npx mocha --reporter nyan $1'
 
 alias clientTest='bundle exec rspec --color test/client/* --default-path test'
 alias clientTestChrome='CHROME=1 bundle exec rspec --color test/client/* --default-path test'
 
 
 alias jenkins='ssh ansible@jenkins2.gamevy.com -i ~/.ssh/ansible_key_jenkins'
+alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
+
+# tmuxinator default alias
+alias start='tmuxinator start default $1'
+
+# vagrant up && ssh
+alias vagrantUp='vagrant up && vagrant ssh'
