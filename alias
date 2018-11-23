@@ -69,3 +69,6 @@ alias start='tmuxinator start default $1'
 
 # vagrant up && ssh
 alias vagrantUp='vagrant up && vagrant ssh'
+
+#fenix: delete node_modules and package-lock and reinstall
+alias fenix='rm -fr node_modules ; rm package-lock.json ; npm i'
