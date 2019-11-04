@@ -2,12 +2,16 @@ export PATH="$PATH:$HOME/.rvm/bin"
 source $(brew --prefix nvm)/nvm.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-
-# ÑAPA provisional arreglar en cuanto tenga tiempo.
-export PATH="$PATH:$NVM_DIR/versions/node/v6.10.2/bin"
+nvm use default
 
 #My own bin folder
 export VIROIDE_HOME="$HOME/dotfiles"
 export PATH=$VIROIDE_HOME/bin:$PATH
 
 # export PATH="/usr/local/opt/ansible@2.0/bin:$PATH"
+
+# AVR PATH, QMK for sweet16
+export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/avr-gcc@8/lib"
+
+export RAX_CREDS_FILE=~/.rackspace_cloud_credentials_uk
