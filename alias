@@ -74,3 +74,5 @@ alias vagrantUp='vagrant up && vagrant ssh'
 alias fenix='rm -fr node_modules ; rm package-lock.json ; npm i'
 
 alias lll='colorls --gs -l'
+
+PythonEnv='source ./venv/bin/activate'
