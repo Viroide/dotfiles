@@ -1,8 +1,4 @@
 export PATH="$PATH:$HOME/.rvm/bin"
-source $(brew --prefix nvm)/nvm.sh
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-nvm use default
 
 #My own bin folder
 export VIROIDE_HOME="$HOME/dotfiles"
