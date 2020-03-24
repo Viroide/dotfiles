@@ -75,4 +75,7 @@ alias fenix='rm -fr node_modules ; rm package-lock.json ; npm i'
 
 alias lll='colorls --gs -l'
 
-PythonEnv='source ./venv/bin/activate'
+alias PythonEnv='source ./venv/bin/activate'
+
+alias DockerClean='docker system prune -a'
+alias loginAWS='AWS_PROFILE=prod  aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 287684434228.dkr.ecr.eu-west-2.amazonaws.com'

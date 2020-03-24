@@ -11,3 +11,9 @@ export PATH="/usr/local/opt/avr-gcc@8/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/avr-gcc@8/lib"
 
 export RAX_CREDS_FILE=~/.rackspace_cloud_credentials_uk
+
+export EDITOR='vim'
+export GPG_TTY=$(tty)
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

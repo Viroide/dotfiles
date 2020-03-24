@@ -27,28 +27,13 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'majutsushi/tagbar'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'takac/vim-hardtime'
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'godlygeek/tabular'
-NeoBundle 'mileszs/ack.vim'
 NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'leafgarland/typescript-vim'
-NeoBundle 'kaicataldo/material.vim'
-NeoBundle 'tyrannicaltoucan/vim-quantum'
-NeoBundle 'othree/es.next.syntax.vim'
-NeoBundle 'rakr/vim-one'
-NeoBundle 'arcticicestudio/nord-vim'
 NeoBundle 'dracula/vim'
 
 
@@ -65,14 +50,8 @@ NeoBundleCheck
 set updatetime=250
 
 
-" Theme 
-" colorscheme one
-" colorscheme nord
+" Theme
 colorscheme dracula
-set background=dark
-" colorscheme quantum 
-
-
 
 syntax on
 set nowrap        " don't wrap lines
@@ -120,25 +99,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" airline config: 
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
 set laststatus=2
 let g:tomorrow = 1
-let g:airline_theme='one'
 " Set to auto read when a file is changed from the outside
 set autoread
-
-" tagbar:
-nmap <leader>t :TagbarToggle<CR>
 
 " awesome config:
 set ruler
@@ -185,14 +149,6 @@ let g:syntastic_html_tidy_ignore_errors=["<ion-", "discarding unexpected </ion-"
 let g:syntastic_javascript_checkers=["eslint"]
 let g:syntastic_typescript_checkers=["eslint"]
 let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
-"Tabular shortcats
-
-if exists(":Tabularize")
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=<CR>
-    nmap <Leader>a: :Tabularize /:<CR>
-    vmap <Leader>a: :Tabularize /:<CR>
-endif
 
 "See all chars:
 "set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣

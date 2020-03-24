@@ -52,7 +52,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git wd vagrant httpie, autojump)
+plugins=(git wd vagrant httpie autojump common-aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -90,22 +90,8 @@ DEFAULT_USER=`whoami`
 source $HOME/dotfiles/alias
 source $HOME/dotfiles/funtions
 source $HOME/dotfiles/exports
-source $HOME/dotfiles/zsh/powerLevel9k
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/jone.eguiluz/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/jone.eguiluz/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/jone.eguiluz/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/jone.eguiluz/.nvm/versions/node/v8.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
 source ~/.tmuxinator.zsh
-export EDITOR='vim'
-export GPG_TTY=$(tty)
-
 
 #python shit
 eval "$(pyenv init -)"
-
-#autojump
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-eval "$(jump shell)"
